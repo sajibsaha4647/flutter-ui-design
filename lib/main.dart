@@ -23,24 +23,34 @@ class MyApp extends StatelessWidget {
 
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Deshboard",style: TextStyle(fontSize: 20)),
-        leading: Icon(Icons.tv_off),
-        actions: [
-          IconButton(onPressed: (){print("sajib press");}, icon: Icon(Icons.camera)),
-          IconButton(onPressed: null, icon: Icon(Icons.phone))
-          ],
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text("Deshboard",style: TextStyle(fontSize: 20)),
+          leading: Icon(Icons.tv_off),
+          actions: [
+            IconButton(onPressed: (){print("sajib press");}, icon: Icon(Icons.camera)),
+            IconButton(onPressed: null, icon: Icon(Icons.phone))
+            ],
+          ),
+          body:
+          Container(
+            child: Column(
+              children: [
+                Text("data"),
+                Container(
+                  child: Text("this is from second container"),
+                )
+              ],
+            ),
+
+          ),
+
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:  [
-            Text("this is my first app"),
-            RaisedButton(onPressed: (){})
-          ],
-        ),
-      ),
+      )
+
+
     );
   }
 }
