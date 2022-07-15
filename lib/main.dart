@@ -76,7 +76,6 @@ class HomePage extends StatelessWidget {
                 ),
                 Expanded(
                     child:ListView(
-                      shrinkWrap: true,
                       children: [
                         Column(
                           children: [
@@ -102,10 +101,42 @@ class HomePage extends StatelessWidget {
                         )
                       ],
                     )
-                )
-
+                ),
+                Expanded(child: ListView(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(child:Icon( Icons.message)),
+                      title: Text("this is a title"),
+                      subtitle: Text("this is subtitle text"),
+                      trailing: CircleAvatar(child:Icon( Icons.camera)),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(child:Icon( Icons.message)),
+                      title: Text("this is a title"),
+                      subtitle: Text("this is subtitle text"),
+                      trailing: CircleAvatar(child:Icon( Icons.camera)),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(child:Icon( Icons.message)),
+                      title: Text("this is a title"),
+                      subtitle: Text("this is subtitle text"),
+                      trailing: CircleAvatar(child:Icon( Icons.camera)),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(child:Icon( Icons.message)),
+                      title: Text("this is a title"),
+                      subtitle: Text("this is subtitle text"),
+                      trailing: CircleAvatar(child:Icon( Icons.camera)),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(child:Icon( Icons.message)),
+                      title: Text("this is a title"),
+                      subtitle: Text("this is subtitle text"),
+                      trailing: CircleAvatar(child:Icon( Icons.camera)),
+                    ),
+                  ],
+                ))
               ],
-
             ),
 
           ),
