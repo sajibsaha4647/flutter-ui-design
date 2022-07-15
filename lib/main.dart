@@ -7,11 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
 
-
-
   const MyApp({Key? key}) : super(key: key);
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,38 +32,72 @@ class MyApp extends StatelessWidget {
           ),
           body:
           Container(
-            child: Row(
+            child: Column(
               children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.amberAccent,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                 child: Row(
+                  children: [
+                    Container(
+                      height: 200,
+                    width: 200,
+                    color:Colors.amberAccent,
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 200,
+                    width: 200,
+                    color:Colors.amberAccent,
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 200,
+                    width: 200,
+                    color:Colors.amberAccent,
+                    ),
+                    SizedBox(width: 10,),
+                    ],
+
+                  ),
                 ),
-                SizedBox(width: 10,),Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.amberAccent,
-                ),
-                SizedBox(width: 10,),Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.amberAccent,
-                ),
-                SizedBox(width: 10,),Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.amberAccent,
-                ),
-                SizedBox(height: 10,),
+                Expanded(
+                    child:ListView(
+                      shrinkWrap: true,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height: 200,
+                          width: 200,
+                          color:Colors.amberAccent,
+                        ),
+                        SizedBox(height: 10,),
+                        Container(
+                          height: 200,
+                          width: 200,
+                          color:Colors.amberAccent,
+                        ),
+                        SizedBox(height: 10,),
+                        Container(
+                          height: 200,
+                          width: 200,
+                          color:Colors.amberAccent,
+                        ),
+                        SizedBox(height: 10,),
+                      ],
+                    )
+                  ],
+                )
+                )
+
               ],
-            ),
 
           ),
 
         ),
       )
 
-
+      )
     );
   }
 }
