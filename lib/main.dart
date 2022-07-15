@@ -11,23 +11,37 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var size,height,width;
-    // getting the size of the window
-    // size = MediaQuery.of(context).size;
-    // height = size.height;
-    // width = size.width;
+
 
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
+      home: HomePage()
+      
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    var size,height,width;
+    // getting the size of the window
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
+
+    return SafeArea(
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
             title: Text("Deshboard",style: TextStyle(fontSize: 20)),
-          leading: Icon(Icons.tv_off),
-          actions: [
-            IconButton(onPressed: (){print("sajib press");}, icon: Icon(Icons.camera)),
-            IconButton(onPressed: null, icon: Icon(Icons.phone))
+            leading: Icon(Icons.tv_off),
+            actions: [
+              IconButton(onPressed: (){print("sajib press");}, icon: Icon(Icons.camera)),
+              IconButton(onPressed: null, icon: Icon(Icons.phone))
             ],
           ),
           body:
@@ -36,26 +50,26 @@ class MyApp extends StatelessWidget {
               children: [
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                 child: Row(
-                  children: [
-                    Container(
-                      height: 200,
-                    width: 200,
-                    color:Colors.amberAccent,
-                    ),
-                    SizedBox(width: 10,),
-                    Container(
-                      height: 200,
-                    width: 200,
-                    color:Colors.amberAccent,
-                    ),
-                    SizedBox(width: 10,),
-                    Container(
-                      height: 200,
-                    width: 200,
-                    color:Colors.amberAccent,
-                    ),
-                    SizedBox(width: 10,),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: height*0.2,
+                        width: 200,
+                        color:Colors.amberAccent,
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 200,
+                        width: 200,
+                        color:Colors.amberAccent,
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 200,
+                        width: 200,
+                        color:Colors.amberAccent,
+                      ),
+                      SizedBox(width: 10,),
                     ],
 
                   ),
@@ -63,43 +77,43 @@ class MyApp extends StatelessWidget {
                 Expanded(
                     child:ListView(
                       shrinkWrap: true,
-                  children: [
-                    Column(
                       children: [
-                        Container(
-                          height: 200,
-                          width: 200,
-                          color:Colors.amberAccent,
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                          height: 200,
-                          width: 200,
-                          color:Colors.amberAccent,
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                          height: 200,
-                          width: 200,
-                          color:Colors.amberAccent,
-                        ),
-                        SizedBox(height: 10,),
+                        Column(
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 200,
+                              color:Colors.amberAccent,
+                            ),
+                            SizedBox(height: 10,),
+                            Container(
+                              height: 200,
+                              width: 200,
+                              color:Colors.amberAccent,
+                            ),
+                            SizedBox(height: 10,),
+                            Container(
+                              height: 200,
+                              width: 200,
+                              color:Colors.amberAccent,
+                            ),
+                            SizedBox(height: 10,),
+                          ],
+                        )
                       ],
                     )
-                  ],
-                )
                 )
 
               ],
 
+            ),
+
           ),
+        )
 
-        ),
-      )
-
-      )
     );
   }
 }
+
 
 
