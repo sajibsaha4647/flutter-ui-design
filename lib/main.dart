@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size,height,width;
+    // var size,height,width;
     // getting the size of the window
     // size = MediaQuery.of(context).size;
     // height = size.height;
@@ -36,12 +36,29 @@ class MyApp extends StatelessWidget {
           ),
           body:
           Container(
-            child: Column(
+            child: Row(
               children: [
-                Text("data"),
                 Container(
-                  child: Text("this is from second container"),
-                )
+                  height: 200,
+                  width: 200,
+                  color: Colors.amberAccent,
+                ),
+                SizedBox(width: 10,),Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.amberAccent,
+                ),
+                SizedBox(width: 10,),Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.amberAccent,
+                ),
+                SizedBox(width: 10,),Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.amberAccent,
+                ),
+                SizedBox(height: 10,),
               ],
             ),
 
